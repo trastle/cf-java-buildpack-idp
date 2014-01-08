@@ -27,6 +27,10 @@
 			<Valve className="org.apache.catalina.valves.RemoteIpValve" protocolHeader="x-forwarded-proto"/>
 			<Host name='localhost'>
 				<Listener className="com.gopivotal.buildpack.support.tomcat.ApplicationStartupFailureDetectingLifecycleListener"/>
+
+        <Context path="/idp" docBase="/home/vcap/app" reloadable="true" allowLinking='true'>
+        </Context>
+
 			</Host>
 		</Engine>
 	</Service>
